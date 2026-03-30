@@ -12,9 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link rel="icon" href="Images/logo-1.png" type="image/x-icon">
-</head>
-<body>
-    <style>
+     <style>
   /* =========================
    GLOBAL STYLES
 ========================= */
@@ -570,26 +568,29 @@ header {
     }
 }
     </style>
-    </style>
-
-    <header id="header">
-        <div class="container">
-            <div class="inner_header">
-                <div class="logo">
-                   <a href="/"> <img src="Images/logo-1.png" alt="Logo" style="width:70px;"></a>
-                </div>
-                <div class="navigation">
-                    <ul>
-                        <li> <a href="#about_me">About us</a></li>
-                         <li> <a href="#experience">Experience </a></li>
-                       <li> <a href="#skill">Skill </a></li>
-                        <li> <a href="#portfolio">Portfolio </a></li>
-                        <li class="nav_btn"> <a href="#Contact">Contact Us </a></li>
-                    </ul>
-                </div>
+  
+</head>
+<body>
+ 
+ <header id="header">
+    <div class="container">
+        <div class="inner_header">
+            <div class="logo">
+                <a href="/"> <img src="Images/logo-1.png" alt="Logo" style="width:70px;"></a>
             </div>
+            <nav class="navigation">
+                <button class="nav-toggle" id="nav-toggle">&#9776;</button>
+                <ul id="nav-menu">
+                    <li><a href="#about_me">About us</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li class="nav_btn"><a href="#Contact">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-    </header>
+    </div>
+</header>
 
     <section class="banner">
         <div class="container">
@@ -1042,6 +1043,12 @@ document.querySelectorAll(".tab_btn").forEach(button => {
         button.classList.add("active");
         document.getElementById(button.getAttribute("data-tab")).classList.add("active");
     });
+});
+    const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
 </script>
 
